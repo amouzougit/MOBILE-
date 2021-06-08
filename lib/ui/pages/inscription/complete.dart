@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hustler_mob/ui/pages/connexion/login.dart';
 import 'package:hustler_mob/ui/pages/inscription/register.dart';
-// ignore: implementation_imports
-import 'package:flutter/src/material/dropdown.dart' show DropdownButton, DropdownMenuItem;
 import '../../../constants.dart';
 
 class CompleteRegister extends StatefulWidget {
@@ -14,7 +12,6 @@ class CompleteRegister extends StatefulWidget {
 }
 
 class _CompleteRegisterState extends State<CompleteRegister> {
-  late String _chosenValue = 'ok';
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -70,7 +67,7 @@ class _CompleteRegisterState extends State<CompleteRegister> {
                   SizedBox(
                     height: 10,
                   ),
-                  
+
                   /*TextFormField(
                     keyboardType: TextInputType.visiblePassword,
                     decoration: InputDecoration(

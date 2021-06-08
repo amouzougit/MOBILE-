@@ -40,9 +40,9 @@ class _AccueilState extends State<Accueil> {
                   height: 10,
                 ),
                 Text(
-                  'Bienvenue sur hustler ,la solution pour vos petits travaux',
+                  'Bienvenue sur hustler ,la solution pour tous vos petits travaux',
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 23,
                   ),
                 ),
               ],
@@ -51,11 +51,12 @@ class _AccueilState extends State<Accueil> {
           Positioned(
             bottom: 0,
             child: Container(
+              margin: EdgeInsets.only(top: 20),
               height: 140,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(28),
-                  color: kPrimaryLightColor),
+                borderRadius: BorderRadius.circular(28),
+              ),
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
@@ -67,7 +68,7 @@ class _AccueilState extends State<Accueil> {
                             MaterialPageRoute(builder: (context) => Login()));
                       },
                       child: CircleAvatar(
-                          radius: 35,
+                          radius: 25,
                           backgroundColor: kPrimaryColor,
                           child: Icon(
                             Icons.arrow_forward_ios_outlined,
