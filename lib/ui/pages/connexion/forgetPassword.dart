@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hustler_mob/test.dart';
 import 'package:hustler_mob/ui/pages/connexion/login.dart';
 import 'package:hustler_mob/ui/pages/inscription/register.dart';
 
@@ -22,6 +23,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
           icon: Icon(
             Icons.arrow_back_ios,
             color: kPrimaryColor,
+            size: 20,
           ),
           onPressed: () {},
         ),
@@ -34,8 +36,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             height: size.height,
             alignment: Alignment.topCenter,
             child: SvgPicture.asset(
-              "assets/icons/continue.svg",
-              height: size.height * 0.25,
+              "assets/icons/forget.svg",
+              height: size.height * 0.3,
               width: size.width,
             ),
           ),
@@ -66,21 +68,6 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           labelStyle: TextStyle(fontFamily: familyFont)),
                     ),
                     SizedBox(
-                      height: 10,
-                    ),
-
-                    /*TextFormField(
-                      keyboardType: TextInputType.visiblePassword,
-                      decoration: InputDecoration(
-                          hintText: "Mot de passe",
-                          labelText: "Mot de passe",
-                          labelStyle: TextStyle(fontFamily: familyFont),
-                      ),
-                    ),*/
-                    SizedBox(
-                      height: 15,
-                    ),
-                    SizedBox(
                       height: 30,
                     ),
                     Row(
@@ -97,7 +84,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Register()));
+                                    builder: (context) => Loading()));
                           },
                           child: CircleAvatar(
                               radius: 25,

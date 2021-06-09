@@ -12,6 +12,11 @@ class CompleteRegister extends StatefulWidget {
 }
 
 class _CompleteRegisterState extends State<CompleteRegister> {
+  late String choix = "";
+  List listItem = [
+    "Client , j'ai bésoin d'aide",
+    "Agent , promouvoir mes services"
+  ];
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -71,17 +76,32 @@ class _CompleteRegisterState extends State<CompleteRegister> {
                           labelStyle: TextStyle(fontFamily: familyFont)),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 25,
                     ),
+                    DropdownButton<String>(
+                      hint: Text('Vous êtes ?'),
+                      //dropdownColor: kPrimaryColor,
+                      icon: Icon(Icons.keyboard_arrow_down_sharp),
+                      iconSize: 25,
 
-                    /*TextFormField(
-                      keyboardType: TextInputType.visiblePassword,
-                      decoration: InputDecoration(
-                          hintText: "Mot de passe",
-                          labelText: "Mot de passe",
-                          labelStyle: TextStyle(fontFamily: familyFont),
+                      underline: Container(
+                        height: 1,
+                        color: Colors.deepPurpleAccent,
                       ),
-                    ),*/
+                      isExpanded: true,
+                      value: choix.isNotEmpty ? choix : null,
+                      onChanged: (String? newChoix) {
+                        setState(() {
+                          choix = newChoix!;
+                        });
+                      },
+                      items: listItem.map((valeur) {
+                        return DropdownMenuItem<String>(
+                          value: valeur,
+                          child: Container(child: Text(valeur)),
+                        );
+                      }).toList(),
+                    ),
                     SizedBox(
                       height: 15,
                     ),
