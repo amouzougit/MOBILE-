@@ -60,13 +60,14 @@ class _AccueilState extends State<Accueil> {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Spacer(),
                     InkWell(
                       onTap: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Login()));
                       },
+                      highlightColor: Colors.white,
                       child: CircleAvatar(
                           radius: 25,
                           backgroundColor: kPrimaryColor,

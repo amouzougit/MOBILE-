@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hustler_mob/ui/pages/connexion/login.dart';
 import 'package:hustler_mob/ui/pages/inscription/register.dart';
+
 import '../../../constants.dart';
 
-class CompleteRegister extends StatefulWidget {
-  const CompleteRegister({Key? key}) : super(key: key);
-
+class ForgetPassword extends StatefulWidget {
   @override
-  _CompleteRegisterState createState() => _CompleteRegisterState();
+  _ForgetPasswordState createState() => _ForgetPasswordState();
 }
 
-class _CompleteRegisterState extends State<CompleteRegister> {
+class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -23,12 +22,8 @@ class _CompleteRegisterState extends State<CompleteRegister> {
           icon: Icon(
             Icons.arrow_back_ios,
             color: kPrimaryColor,
-            size: 20,
           ),
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Register()));
-          },
+          onPressed: () {},
         ),
       ),
       //backgroundColor: kPrimaryColor,
@@ -66,8 +61,8 @@ class _CompleteRegisterState extends State<CompleteRegister> {
                     TextFormField(
                       keyboardType: TextInputType.name,
                       decoration: InputDecoration(
-                          hintText: "Nom d'utilisateur",
-                          labelText: "Nom d'utilisateur",
+                          hintText: "Email",
+                          labelText: "Email",
                           labelStyle: TextStyle(fontFamily: familyFont)),
                     ),
                     SizedBox(
@@ -93,7 +88,7 @@ class _CompleteRegisterState extends State<CompleteRegister> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "S'inscrire",
+                          "Envoyer",
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.bold),
                         ),
