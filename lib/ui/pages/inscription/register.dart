@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
           },
         ),
       ),
-      backgroundColor: kPrimaryColor,
+      //backgroundColor: kPrimaryColor,
       body: Stack(
         children: [
           Container(
@@ -70,9 +70,8 @@ class _RegisterState extends State<Register> {
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
-                            hintText: "Email",
+                            hintText: "votre adresse email",
                             labelText: "Email",
-                            hintStyle: TextStyle(color: kPrimaryColor),
                             labelStyle: TextStyle(
                                 fontFamily: familyFont, fontSize: 13)),
                       ),
@@ -82,9 +81,8 @@ class _RegisterState extends State<Register> {
                       TextFormField(
                         keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
-                            hintText: "Mot de passe",
+                            hintText: "choisissez un mot de passe",
                             labelText: "Mot de passe",
-                            hintStyle: TextStyle(color: kPrimaryColor),
                             labelStyle: TextStyle(
                                 fontFamily: familyFont, fontSize: 13)),
                       ),

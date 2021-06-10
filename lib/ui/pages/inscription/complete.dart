@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hustler_mob/ui/pages/connexion/login.dart';
 import 'package:hustler_mob/ui/pages/inscription/register.dart';
+import 'package:hustler_mob/ui/pages/inscription/verifiedEmail.dart';
 import '../../../constants.dart';
 
 class CompleteRegister extends StatefulWidget {
@@ -122,7 +123,7 @@ class _CompleteRegisterState extends State<CompleteRegister> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Register()));
+                                    builder: (context) => VerifiedEmail()));
                           },
                           child: CircleAvatar(
                               radius: 25,

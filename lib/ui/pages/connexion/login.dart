@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
           },
         ),
       ),
-      backgroundColor: kPrimaryColor,
+      //backgroundColor: kPrimaryColor,
       body: Stack(
         children: [
           Container(
@@ -64,9 +64,8 @@ class _LoginState extends State<Login> {
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
-                            hintText: "Email",
+                            hintText: "votre adresse email",
                             labelText: "Email",
-                            hintStyle: TextStyle(color: kPrimaryColor),
                             labelStyle: TextStyle(
                                 fontFamily: familyFont, fontSize: 13)),
                       ),
@@ -76,39 +75,39 @@ class _LoginState extends State<Login> {
                       TextFormField(
                         keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
-                            hintText: "Mot de passe",
+                            hintText: "entrer votre mot de passe",
                             labelText: "Mot de passe",
-                            hintStyle: TextStyle(color: kPrimaryColor),
                             labelStyle: TextStyle(
                                 fontFamily: familyFont, fontSize: 13)),
-                      ),
-                      SizedBox(
-                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ForgetPassword()));
-                            },
-                            child: Text(
-                              'mot de passe oublié',
-                              style: TextStyle(
-                                  fontSize: 12,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: kPrimaryColor,
-                                  color: kPrimaryColor),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ForgetPassword()));
+                              },
+                              child: Text(
+                                'mot de passe oublié',
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    decoration: TextDecoration.underline,
+                                    decorationColor: kPrimaryColor,
+                                    color: kPrimaryColor),
+                              ),
                             ),
                           )
                         ],
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 5,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

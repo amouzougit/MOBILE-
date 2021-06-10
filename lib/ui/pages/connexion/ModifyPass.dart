@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-//import 'package:hustler_mob/test.dart';
-import 'package:hustler_mob/ui/pages/connexion/ModifyPass.dart';
-import 'package:hustler_mob/ui/pages/connexion/login.dart';
+import 'package:hustler_mob/ui/pages/connexion/forgetPassword.dart';
+import 'package:hustler_mob/ui/pages/inscription/register.dart';
 
 import '../../../constants.dart';
+import 'login.dart';
 
-class ForgetPassword extends StatefulWidget {
+class ModifyPass extends StatefulWidget {
+  const ModifyPass({Key? key}) : super(key: key);
+
   @override
-  _ForgetPasswordState createState() => _ForgetPasswordState();
+  _ModifyPassState createState() => _ModifyPassState();
 }
 
-class _ForgetPasswordState extends State<ForgetPassword> {
+class _ModifyPassState extends State<ModifyPass> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,8 +28,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             size: 20,
           ),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Login()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => ForgetPassword()));
           },
         ),
       ),
@@ -39,7 +41,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             height: size.height,
             alignment: Alignment.topCenter,
             child: SvgPicture.asset(
-              "assets/icons/forget.svg",
+              "assets/icons/modifypass.svg",
               height: size.height * 0.3,
               width: size.width,
             ),
@@ -63,12 +65,61 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     SizedBox(
                       height: 10,
                     ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            child: TextFormField(
+                              keyboardType: TextInputType.name,
+                              decoration: InputDecoration(
+                                  hintText: "Entrer le code de verification",
+                                  labelText: "code de vérification",
+                                  labelStyle:
+                                      TextStyle(fontFamily: familyFont)),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                          ),
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Renvoyer",
+                                  style: TextStyle(
+                                    color: kPrimaryColor,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.rotate_right_sharp,
+                                  color: kPrimaryColor,
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
                     TextFormField(
-                      keyboardType: TextInputType.name,
+                      keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
-                          hintText: "Email",
-                          labelText: "Email",
-                          labelStyle: TextStyle(fontFamily: familyFont)),
+                          hintText: "Entrer votre nouveau mot de passe",
+                          labelText: "nouveau mot de passe",
+                          labelStyle: TextStyle(
+                            fontFamily: familyFont,
+                          )),
                     ),
                     SizedBox(
                       height: 30,
@@ -78,7 +129,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          "Envoyer",
+                          "Confirmer",
                           style: TextStyle(
                               fontSize: 22, fontWeight: FontWeight.bold),
                         ),
@@ -87,7 +138,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ModifyPass()));
+                                    builder: (context) => Register()));
                           },
                           child: CircleAvatar(
                               radius: 25,
