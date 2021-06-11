@@ -6,6 +6,7 @@ int hexColor(String color) {
   int finalColor = int.parse(newColor);
   return finalColor;
 }
+
 const String familyFont = 'Sofia';
 Color kPrimaryColor = Color(hexColor('#6C63FF'));
-const kPrimaryLightColor = Color.fromARGB(255, 247, 249, 252);
+Color kPrimaryLightColor = Color(hexColor('##eeeeee'));

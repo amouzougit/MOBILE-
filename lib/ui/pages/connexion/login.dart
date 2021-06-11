@@ -4,6 +4,7 @@ import 'package:hustler_mob/constants.dart';
 import 'package:hustler_mob/ui/pages/accueil/accueil.dart';
 import 'package:hustler_mob/ui/pages/connexion/forgetPassword.dart';
 import 'package:hustler_mob/ui/pages/inscription/register.dart';
+import 'package:hustler_mob/ui/pages/principal/menu.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -123,7 +124,7 @@ class _LoginState extends State<Login> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Login()));
+                                      builder: (context) => Menu()));
                             },
                             child: CircleAvatar(
                                 radius: 25,
