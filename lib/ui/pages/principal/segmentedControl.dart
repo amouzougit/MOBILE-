@@ -16,7 +16,7 @@ class Segment extends StatefulWidget {
 class _SegmentState extends State<Segment> {
   int sharedValue = 0;
   final Map<int, Widget> logoWidgets = const <int, Widget>{
-    0: Text('Offres'),
+    0: Text('Activités'),
     1: Text('Agents'),
   };
 

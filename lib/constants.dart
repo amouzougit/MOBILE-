@@ -9,4 +9,5 @@ int hexColor(String color) {
 
 const String familyFont = 'Sofia';
 Color kPrimaryColor = Color(hexColor('#6C63FF'));
+//Color kPrimaryColor = Colors.black;
 Color kPrimaryLightColor = Color(hexColor('##eeeeee'));

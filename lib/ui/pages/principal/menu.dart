@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hustler_mob/ui/pages/principal/activity/acctivity.dart';
 import 'package:hustler_mob/ui/pages/principal/home/home.dart';
+
+import 'package:hustler_mob/constants.dart';
+import 'package:hustler_mob/ui/pages/principal/message/messages.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -12,8 +16,8 @@ class _MenuState extends State<Menu> {
   int selectIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     Home(),
-    Text('Activités'),
-    Text('Messages'),
+    Activity(),
+    Messages(),
     Text('Profile'),
   ];
 
@@ -30,8 +34,7 @@ class _MenuState extends State<Menu> {
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
-        unselectedLabelStyle: TextStyle(color: Colors.red),
-        fixedColor: Colors.blue,
+        fixedColor: kPrimaryColor,
         type: BottomNavigationBarType.fixed,
         //backgroundColor: Colors.grey,
         items: <BottomNavigationBarItem>[
