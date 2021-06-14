@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -29,11 +31,12 @@ class _MessagesState extends State<Messages> {
   ];
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.grey[100],
+        backgroundColor: Colors.white,
         title: Container(
           padding: EdgeInsets.only(top: 20),
           child: Text(
@@ -45,9 +48,28 @@ class _MessagesState extends State<Messages> {
       ),
       body: Container(
         padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-        color: Colors.grey[300],
+        //color: Colors.grey[300],
         child: Column(
           children: [
+            Container(
+              height: size.height * 0.06,
+              margin: EdgeInsets.all(10),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.grey[300]),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.grey,
+                      ),
+                      hintText: 'Recherche',
+                      hintStyle: TextStyle(color: Colors.grey)),
+                ),
+              ),
+            ),
             Container(
               child: Column(
                 children: messageList.map((message) {
@@ -84,22 +106,23 @@ class MessageCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       CircleAvatar(
-                        //radius: 20,
-                        //backgroundColor: Colors.blueGrey,
-                        child: Container(
+                          radius: 20,
+                          backgroundColor: Colors.blueGrey,
+                          child:
+                              /*Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                             image: DecorationImage(
                               image: AssetImage('assets/images/avatar.png'),
                               fit: BoxFit.cover,
                             ),
-                          ), /*Icon(
+                          ),
+                          ),*/
+                              Icon(
                             Icons.person,
                             size: 22,
                             color: Colors.white,
-                          )*/
-                        ),
-                      ),
+                          )),
                       SizedBox(width: 5),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -108,9 +131,9 @@ class MessageCard extends StatelessWidget {
                           Text(
                             messageData['nom'],
                             style: TextStyle(
-                              fontSize: 13,
+                              fontSize: 15,
                               //color: Colors.grey[500]
-                              fontWeight: FontWeight.w800,
+                              fontWeight: FontWeight.w600,
                             ),
                           ),
                           Container(
@@ -119,7 +142,9 @@ class MessageCard extends StatelessWidget {
                             padding: EdgeInsets.only(top: 5),
                             child: Text(messageData['message'],
                                 maxLines: 2,
-                                style: GoogleFonts.notoSerif(fontSize: 14)),
+                                style: GoogleFonts.notoSerif(
+                                  fontSize: 13,
+                                )),
                           ),
                         ],
                       ),
