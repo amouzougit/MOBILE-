@@ -11,3 +11,4 @@ const String familyFont = 'Sofia';
 Color kPrimaryColor = Color(hexColor('#6C63FF'));
 //Color kPrimaryColor = Colors.black;
 Color kPrimaryLightColor = Color(hexColor('##eeeeee'));
+const String version = '1.0.0';

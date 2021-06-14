@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/activity/acctivity.dart';
+import 'package:hustler_mob/ui/pages/principal/activity/activity.dart';
 import 'package:hustler_mob/ui/pages/principal/home/home.dart';
 
 import 'package:hustler_mob/constants.dart';
 import 'package:hustler_mob/ui/pages/principal/message/messages.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/profil.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _MenuState extends State<Menu> {
     Home(),
     Activity(),
     Messages(),
-    Text('Profile'),
+    Profil(),
   ];
 
   void onItemTap(int index) {

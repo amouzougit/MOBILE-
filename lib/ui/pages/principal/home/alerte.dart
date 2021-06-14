@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+//import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../constants.dart';
@@ -85,13 +85,13 @@ class _AlerteState extends State<Alerte> {
   ];
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    //Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
       color: Colors.grey[300],
       child: Column(
         children: [
-          Container(
+          /*Container(
             //padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
             //color: kPrimaryColor,
             child: SvgPicture.asset(
@@ -99,7 +99,7 @@ class _AlerteState extends State<Alerte> {
               height: size.height * 0.1,
               color: Colors.white,
             ),
-          ),
+          ),*/
           Container(
             child: Column(
               children: alertList.map((alerte) {

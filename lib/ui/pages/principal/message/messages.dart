@@ -107,7 +107,7 @@ class MessageCard extends StatelessWidget {
                     children: [
                       CircleAvatar(
                           radius: 20,
-                          backgroundColor: Colors.blueGrey,
+                          backgroundColor: kPrimaryColor,
                           child:
                               /*Container(
                           decoration: BoxDecoration(
@@ -143,8 +143,7 @@ class MessageCard extends StatelessWidget {
                             child: Text(messageData['message'],
                                 maxLines: 2,
                                 style: GoogleFonts.notoSerif(
-                                  fontSize: 13,
-                                )),
+                                    fontSize: 13, color: Colors.grey[800])),
                           ),
                         ],
                       ),
