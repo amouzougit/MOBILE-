@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/ui/pages/principal/home/contenu.dart';
+import 'package:hustler_mob/ui/pages/principal/home/contenuAlt.dart';
 
 import '../../../../constants.dart';
 

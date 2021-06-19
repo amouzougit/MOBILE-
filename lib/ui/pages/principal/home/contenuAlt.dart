@@ -30,8 +30,7 @@ class _AlerteContenuState extends State<AlerteContenu> {
             size: 20,
           ),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Menu()));
+            Navigator.pop(context, true);
           },
         ),
         actions: [

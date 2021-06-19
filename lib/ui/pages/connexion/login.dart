@@ -121,7 +121,7 @@ class _LoginState extends State<Login> {
                           ),
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => Menu()));

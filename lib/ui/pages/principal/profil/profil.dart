@@ -81,7 +81,7 @@ class _ProfilState extends State<Profil> {
                   children: [
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -106,12 +106,12 @@ class _ProfilState extends State<Profil> {
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
+                      //height: 0.5,
                       color: Colors.grey[400],
                     ),
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,12 +139,12 @@ class _ProfilState extends State<Profil> {
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
+                      //height: 0.5,
                       color: Colors.grey[400],
                     ),
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -175,13 +175,13 @@ class _ProfilState extends State<Profil> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 20),
-                height: size.height * 0.2,
+                //height: size.//height * 0.2,
                 color: Colors.white,
                 child: Column(
                   children: [
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -207,12 +207,12 @@ class _ProfilState extends State<Profil> {
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
+                      //height: 0.5,
                       color: Colors.grey[400],
                     ),
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -240,12 +240,12 @@ class _ProfilState extends State<Profil> {
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
+                      //height: 0.5,
                       color: Colors.grey[400],
                     ),
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -276,13 +276,13 @@ class _ProfilState extends State<Profil> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 20),
-                height: size.height * 0.2,
+                //height: size.//height * 0.2,
                 color: Colors.white,
                 child: Column(
                   children: [
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -307,12 +307,12 @@ class _ProfilState extends State<Profil> {
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
+                      //height: 0.5,
                       color: Colors.grey[400],
                     ),
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -340,12 +340,12 @@ class _ProfilState extends State<Profil> {
                     ),
                     Container(
                       margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
+                      //height: 0.5,
                       color: Colors.grey[400],
                     ),
                     Container(
                       padding: EdgeInsets.all(8.0),
-                      height: size.height * 0.06,
+                      //height: size.//height * 0.06,
                       width: size.width,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -375,8 +375,8 @@ class _ProfilState extends State<Profil> {
                 ),
               ),
               SizedBox(
-                height: 10,
-              ),
+                  //height: 10,
+                  ),
               Text(
                 'Hustler',
                 style: GoogleFonts.nunito(fontSize: 15),
