@@ -73,6 +73,7 @@ class _MessagesState extends State<Messages> {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(top: 5),
               child: Column(
                 children: messageList.map((message) {
                   return MessageCard(message);
