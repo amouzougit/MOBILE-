@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/ui/pages/principal/home/contenuAlt.dart';
+import 'package:hustler_mob/ui/pages/principal/home/alerte/contenuAlt.dart';
 
-import '../../../../constants.dart';
+import '../../../../../constants.dart';
 
-class Alerte extends StatefulWidget {
-  const Alerte({Key? key}) : super(key: key);
+class AlerteList extends StatefulWidget {
+  const AlerteList({Key? key}) : super(key: key);
   @override
-  _AlerteState createState() => _AlerteState();
+  _AlerteListState createState() => _AlerteListState();
 }
 
-class _AlerteState extends State<Alerte> {
+class _AlerteListState extends State<AlerteList> {
   final List alertList = [
     {
       'service': "Travaux domicile ",
@@ -89,7 +88,7 @@ class _AlerteState extends State<Alerte> {
     //Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-      color: Colors.grey[300],
+      //color: Colors.grey[300],
       child: Column(
         children: [
           /*Container(

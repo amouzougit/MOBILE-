@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte.dart';
+import 'package:hustler_mob/ui/pages/principal/home/alerte/alerteCreation.dart';
+import 'package:hustler_mob/ui/pages/principal/home/alerte/alerteList.dart';
+import 'package:hustler_mob/ui/pages/principal/home/notifications/notifications.dart';
+import 'package:hustler_mob/ui/pages/principal/home/postAgent/postCreation.dart';
 
 import '../../../../constants.dart';
 
@@ -16,21 +19,29 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar(),
-      body: SingleChildScrollView(
-          child: Column(
-        children: [
-          SearchBar(),
-          Alerte(),
-        ],
-      )),
+      body: Container(
+        decoration: BoxDecoration(
+            borderRadius: new BorderRadius.only(
+              topLeft: const Radius.circular(50.0),
+              topRight: const Radius.circular(50.0),
+            ),
+            color: Colors.grey[300]),
+        child: SingleChildScrollView(
+            child: Column(
+          children: [
+            SearchBar(),
+            AlerteList(),
+          ],
+        )),
+      ),
     );
   }
 }
 
 // AppBar
-
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => new Size.fromHeight(50);
+  static const String userType = "client";
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -40,7 +51,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           Icons.add_circle_outline,
           color: kPrimaryColor,
         ),
-        onPressed: () {},
+        onPressed: () {
+          (userType == 'client')
+              ? Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => AlerteCreation()))
+              : Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => PostCreation()));
+        },
       ),
       title: Text('Hustler',
           style: GoogleFonts.nunito(
@@ -51,7 +68,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             Icons.notifications_none_rounded,
             color: kPrimaryColor,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Notifications()));
+          },
         ),
       ],
       backgroundColor: Colors.white,

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../constants.dart';
+import '../../../../../constants.dart';
 
-class Mission extends StatefulWidget {
-  const Mission({Key? key}) : super(key: key);
+class NotficationList extends StatefulWidget {
+  const NotficationList({Key? key}) : super(key: key);
 
   @override
-  _MissionState createState() => _MissionState();
+  _NotficationListState createState() => _NotficationListState();
 }
 
-class _MissionState extends State<Mission> {
-  final List activities = [
+class _NotficationListState extends State<NotficationList> {
+  final List notifs = [
     {
       "titre": "Offre reçue",
       "cmessage": "vous avez recu une offre de Marc",
@@ -29,13 +29,13 @@ class _MissionState extends State<Mission> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-      //color: Colors.grey[300],
+      color: Colors.grey[300],
       child: Column(
         children: [
           Container(
             child: Column(
-              children: activities.map((activity) {
-                return MissionCard(activity);
+              children: notifs.map((notification) {
+                return NotifCard(notification);
               }).toList(),
             ),
           )
@@ -45,9 +45,9 @@ class _MissionState extends State<Mission> {
   }
 }
 
-class MissionCard extends StatelessWidget {
-  final Map misssionData;
-  MissionCard(this.misssionData);
+class NotifCard extends StatelessWidget {
+  final Map notifData;
+  NotifCard(this.notifData);
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -72,7 +72,7 @@ class MissionCard extends StatelessWidget {
                             radius: 20,
                             backgroundColor: kPrimaryColor,
                             child: Icon(
-                              Icons.local_activity,
+                              Icons.notifications_active_outlined,
                               size: 22,
                               color: Colors.white,
                             )),
@@ -82,7 +82,7 @@ class MissionCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              misssionData['titre'],
+                              notifData['titre'],
                               style: TextStyle(
                                 fontSize: 15,
                                 //color: Colors.grey[500]
@@ -93,7 +93,7 @@ class MissionCard extends StatelessWidget {
                               //color: kPrimaryColor,
                               width: size.width * 0.65,
                               padding: EdgeInsets.only(top: 5),
-                              child: Text(misssionData['cmessage'],
+                              child: Text(notifData['cmessage'],
                                   maxLines: 2,
                                   style: GoogleFonts.notoSerif(
                                       fontSize: 13, color: Colors.grey[800])),

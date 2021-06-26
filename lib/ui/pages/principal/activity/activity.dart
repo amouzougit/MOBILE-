@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hustler_mob/ui/pages/principal/activity/agents.dart';
+import 'package:hustler_mob/ui/pages/principal/activity/missions.dart';
 import 'package:hustler_mob/ui/pages/principal/activity/nothing.dart';
-/*import 'package:hustler_mob/constants.dart';
-
-import 'missions.dart';*/
 
 class Activity extends StatefulWidget {
   const Activity({Key? key}) : super(key: key);
@@ -15,6 +13,7 @@ class Activity extends StatefulWidget {
 
 class _ActivityState extends State<Activity> {
   int sharedValue = 0;
+  static const activity = true;
   final Map<int, Widget> options = const <int, Widget>{
     0: Text(
       'Missions',
@@ -30,7 +29,7 @@ class _ActivityState extends State<Activity> {
   };
 
   final Map<int, Widget> contains = const <int, Widget>{
-    0: Nothing(),
+    0: (activity == true) ? Nothing() : SingleChildScrollView(child: Mission()),
     1: SingleChildScrollView(
       child: Agents(),
     ),
