@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../constants.dart';
 
@@ -18,6 +17,11 @@ class _AdresseState extends State<Adresse> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Adresse',
+          style: TextStyle(color: Colors.black, fontSize: 17),
+        ),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
@@ -34,17 +38,6 @@ class _AdresseState extends State<Adresse> {
           color: Colors.grey[200],
           child: Column(
             children: [
-              Container(
-                padding: EdgeInsets.only(left: 15, right: 10),
-                color: Colors.white,
-                width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text('Mon adresse',
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                ),
-              ),
               SizedBox(
                 height: 25,
               ),

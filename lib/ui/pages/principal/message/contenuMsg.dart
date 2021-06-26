@@ -117,7 +117,7 @@ class _MessageContenuState extends State<MessageContenu> {
             Container(
               width: size.width,
               color: Colors.grey[300],
-              padding: EdgeInsets.only(bottom: 100),
+              padding: EdgeInsets.only(bottom: 80),
               child: Column(
                 //crossAxisAlignment: CrossAxisAlignment.start,
                 children: msgs.map((message) {
@@ -197,7 +197,6 @@ class MsgsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       padding: (msgData['emetteur'] == 'id2'
           ? EdgeInsets.only(left: 8, top: 10, right: 100, bottom: 5)

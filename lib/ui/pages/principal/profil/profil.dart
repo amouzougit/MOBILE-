@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hustler_mob/constants.dart';
+import 'package:hustler_mob/ui/pages/connexion/login.dart';
 import 'package:hustler_mob/ui/pages/principal/profil/adresse.dart';
 import 'package:hustler_mob/ui/pages/principal/profil/aide.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/annonce.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/professionnel.dart';
 import 'package:hustler_mob/ui/pages/principal/profil/competence.dart';
 import 'package:hustler_mob/ui/pages/principal/profil/info.dart';
 import 'package:hustler_mob/ui/pages/principal/profil/informations.dart';
@@ -228,7 +229,7 @@ class _ProfilState extends State<Profil> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Annonces()));
+                                  builder: (context) => Professionnel()));
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -236,11 +237,10 @@ class _ProfilState extends State<Profil> {
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Icon(Icons.announcement_outlined,
-                                    color: kPrimaryColor),
+                                Icon(Icons.verified, color: kPrimaryColor),
                                 SizedBox(width: 10),
                                 Text(
-                                  'Mes annonces',
+                                  'Devenir PRO',
                                   style: GoogleFonts.nunito(fontSize: 15),
                                 ),
                               ],
@@ -427,7 +427,10 @@ class _ProfilState extends State<Profil> {
                       //height: size.//height * 0.06,
                       width: size.width,
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Login()));
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

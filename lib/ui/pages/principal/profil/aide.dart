@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../constants.dart';
 
@@ -18,6 +17,11 @@ class _AidesState extends State<Aides> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Aide',
+          style: TextStyle(color: Colors.black, fontSize: 17),
+        ),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,

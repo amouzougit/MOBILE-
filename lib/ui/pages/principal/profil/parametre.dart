@@ -17,6 +17,11 @@ class _ParametresState extends State<Parametres> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Paramètres',
+          style: TextStyle(color: Colors.black, fontSize: 17),
+        ),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
@@ -34,17 +39,6 @@ class _ParametresState extends State<Parametres> {
           color: Colors.grey[200],
           child: Column(
             children: [
-              Container(
-                padding: EdgeInsets.only(left: 15, right: 10),
-                color: Colors.white,
-                width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text("Paramètres",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                ),
-              ),
               Container(
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                 height: 0.5,

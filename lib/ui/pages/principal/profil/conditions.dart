@@ -17,6 +17,11 @@ class _ConditionsState extends State<Conditions> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
+        centerTitle: true,
+        title: Text(
+          'Conditions',
+          style: TextStyle(color: Colors.black, fontSize: 17),
+        ),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
