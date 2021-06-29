@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/bioModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/dnaissanceModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/emailModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/genreModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/numberModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/usernamesModify.dart';
 
 import '../../../../constants.dart';
 
@@ -114,37 +120,48 @@ class _InformationsState extends State<Informations> {
                                 left: 5, top: 8.0, bottom: 8.0, right: 8),
                             //height: size.height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Nom',
-                                          style:
-                                              GoogleFonts.nunito(fontSize: 15),
-                                        ),
-                                        Text(
-                                          'Username',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            UsernamesModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Nom',
+                                            style: GoogleFonts.nunito(
+                                                fontSize: 15),
+                                          ),
+                                          Text(
+                                            'Username',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -156,24 +173,34 @@ class _InformationsState extends State<Informations> {
                             padding: EdgeInsets.fromLTRB(5, 8.0, 8.0, 8),
                             //height: size.//height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Text(
-                                      'Décrivez vous !',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => BioModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Décrivez vous !',
+                                        style: TextStyle(fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -200,37 +227,47 @@ class _InformationsState extends State<Informations> {
                                 left: 5, top: 8.0, bottom: 8.0, right: 8),
                             //height: size.height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Adresse E-MAIL',
-                                          style:
-                                              GoogleFonts.nunito(fontSize: 15),
-                                        ),
-                                        Text(
-                                          'Exemple@gmail.com',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => EmailModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Adresse E-MAIL',
+                                            style: GoogleFonts.nunito(
+                                                fontSize: 15),
+                                          ),
+                                          Text(
+                                            'Exemple@gmail.com',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -242,37 +279,47 @@ class _InformationsState extends State<Informations> {
                             padding: EdgeInsets.fromLTRB(5, 8.0, 8.0, 8),
                             //height: size.//height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Numéro de Téléphone',
-                                          style:
-                                              GoogleFonts.nunito(fontSize: 15),
-                                        ),
-                                        Text(
-                                          'Aucun',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => NumberModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Numéro de Téléphone',
+                                            style: GoogleFonts.nunito(
+                                                fontSize: 15),
+                                          ),
+                                          Text(
+                                            'Aucun',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -299,37 +346,47 @@ class _InformationsState extends State<Informations> {
                                 left: 5, top: 8.0, bottom: 8.0, right: 8),
                             //height: size.height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Genre',
-                                          style:
-                                              GoogleFonts.nunito(fontSize: 15),
-                                        ),
-                                        Text(
-                                          'Non Spécifié',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => GenreModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Genre',
+                                            style: GoogleFonts.nunito(
+                                                fontSize: 15),
+                                          ),
+                                          Text(
+                                            'Non Spécifié',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -341,37 +398,47 @@ class _InformationsState extends State<Informations> {
                             padding: EdgeInsets.fromLTRB(5, 8.0, 8.0, 8),
                             //height: size.//height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'Date de Naissance',
-                                          style:
-                                              GoogleFonts.nunito(fontSize: 15),
-                                        ),
-                                        Text(
-                                          'Non Spécifié',
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => DnaissModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            'Date de Naissance',
+                                            style: GoogleFonts.nunito(
+                                                fontSize: 15),
+                                          ),
+                                          Text(
+                                            'Non Spécifié',
+                                            style: TextStyle(
+                                                fontSize: 15,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -382,7 +449,7 @@ class _InformationsState extends State<Informations> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 10),
                   ],
                 ),
               )

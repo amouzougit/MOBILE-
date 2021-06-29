@@ -41,7 +41,7 @@ class _NotificationsState extends State<Notifications> {
           child: (notification)
               // ignore: dead_code
               ? SingleChildScrollView(child: NotficationList())
-              : NothingNot()),
+              : Center(child: NothingNot())),
     );
   }
 }
