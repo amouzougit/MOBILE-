@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/contactUs.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/passwordModify.dart';
 
 import '../../../../constants.dart';
 
@@ -67,24 +69,35 @@ class _ParametresState extends State<Parametres> {
                                 left: 5, top: 10.0, bottom: 10.0, right: 8),
                             //height: size.height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Text(
-                                      'Changer de mot de passe',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            PasswordModify()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Changer de mot de passe',
+                                        style: TextStyle(fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(
@@ -127,24 +140,34 @@ class _ParametresState extends State<Parametres> {
                                 left: 5, top: 10.0, bottom: 10.0, right: 8),
                             //height: size.height * 0.06,
                             width: size.width,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    SizedBox(width: 10),
-                                    Text(
-                                      'Contactez-nous',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                                Icon(
-                                  Icons.arrow_forward_ios_rounded,
-                                  size: 15,
-                                )
-                              ],
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ContactUs()));
+                              },
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Contactez-nous',
+                                        style: TextStyle(fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 15,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           Container(

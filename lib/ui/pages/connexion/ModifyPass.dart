@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hustler_mob/ui/pages/connexion/forgetPassword.dart';
-import 'package:hustler_mob/ui/pages/inscription/register.dart';
-
+import 'package:hustler_mob/ui/pages/principal/menu.dart';
 import '../../../constants.dart';
 import 'login.dart';
 
@@ -28,8 +26,7 @@ class _ModifyPassState extends State<ModifyPass> {
             size: 20,
           ),
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ForgetPassword()));
+            Navigator.pop(context, true);
           },
         ),
       ),
@@ -135,10 +132,10 @@ class _ModifyPassState extends State<ModifyPass> {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Register()));
+                                    builder: (context) => Menu()));
                           },
                           child: CircleAvatar(
                               radius: 25,

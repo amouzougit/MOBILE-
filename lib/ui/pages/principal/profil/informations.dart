@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/bioModify.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/dnaissanceModify.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/emailModify.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/genreModify.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/numberModify.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/InfoEdit/usernamesModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/bioModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/dnaissanceModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/emailModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/genreModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/numberModify.dart';
+import 'package:hustler_mob/ui/pages/principal/profil/Edit/usernamesModify.dart';
 
 import '../../../../constants.dart';
 

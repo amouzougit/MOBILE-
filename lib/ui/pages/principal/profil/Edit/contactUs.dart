@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../../../../../constants.dart';
 
-class DnaissModify extends StatefulWidget {
-  const DnaissModify({Key? key}) : super(key: key);
+class ContactUs extends StatefulWidget {
+  const ContactUs({Key? key}) : super(key: key);
 
   @override
-  _DnaissModifyState createState() => _DnaissModifyState();
+  _ContactUsState createState() => _ContactUsState();
 }
 
-class _DnaissModifyState extends State<DnaissModify> {
+class _ContactUsState extends State<ContactUs> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -19,7 +19,7 @@ class _DnaissModifyState extends State<DnaissModify> {
         backgroundColor: Colors.white,
         centerTitle: true,
         title: Text(
-          'Date de naissance',
+          'Contact',
           style: TextStyle(color: Colors.black, fontSize: 17),
         ),
         leading: IconButton(
@@ -39,18 +39,10 @@ class _DnaissModifyState extends State<DnaissModify> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15, 15, 15, 5),
-                child: Text("Date au format : jj/mm/yy , Exemple: 31/12/99",
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w300)),
-              ),
               Container(
                 padding: const EdgeInsets.fromLTRB(15, 15, 15, 20),
                 child: TextFormField(
-                  initialValue: "Date de l'utilisateur",
+                  initialValue: "",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
@@ -61,9 +53,9 @@ class _DnaissModifyState extends State<DnaissModify> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(5)),
                       contentPadding:
-                          EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                      hintText: "",
-                      labelText: "Date de naissance",
+                          EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+                      hintText: "Votre message",
+                      labelText: "Votre message",
                       labelStyle: TextStyle(fontFamily: familyFont)),
                 ),
               ),
@@ -81,7 +73,7 @@ class _DnaissModifyState extends State<DnaissModify> {
         child: TextButton(
           onPressed: () {},
           child: Text(
-            'Enregistrer',
+            'Envoyer',
             style: TextStyle(
                 fontWeight: FontWeight.bold, color: Colors.white, fontSize: 17),
           ),

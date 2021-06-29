@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
 import 'package:hustler_mob/constants.dart';
+import 'package:hustler_mob/ui/pages/principal/home/alerte/alerteConditionsAccept.dart';
 
 class AlerteContenu extends StatefulWidget {
   const AlerteContenu({Key? key}) : super(key: key);
@@ -310,7 +311,12 @@ class _AlerteContenuState extends State<AlerteContenu> {
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     color: kPrimaryColor),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AlerteConditionAccept()));
+                  },
                   child: Text(
                     'Faire une offre',
                     style: TextStyle(
@@ -336,7 +342,7 @@ class JobberCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 15.0),
       child: Container(
-        height: size.height * 0.23,
+        height: size.height * 0.2,
         width: size.width * 0.33,
         decoration: BoxDecoration(
             color: Colors.white,
@@ -344,29 +350,20 @@ class JobberCard extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(20))),
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 10, bottom: 10),
-              child: CircleAvatar(
-                radius: 28,
-                backgroundColor: Colors.blueGrey,
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(28)),
-                    image: DecorationImage(
-                      image: AssetImage('assets/images/ia.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+            Container(
+              height: size.height * 0.1,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    topRight: Radius.circular(20)),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/ia.png'),
+                  fit: BoxFit.cover,
                 ),
-                /*Icon(
-                              Icons.person,
-                              size: 22,
-                              color: Colors.white,
-                            )*/
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 2.0),
+              padding: const EdgeInsets.only(top: 12, bottom: 2.0),
               child: Text(
                 jobberData['nom'],
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hustler_mob/constants.dart';
 import 'package:hustler_mob/ui/pages/connexion/login.dart';
+import 'package:hustler_mob/ui/pages/inscription/register.dart';
 
 class Accueil extends StatefulWidget {
   const Accueil({Key? key}) : super(key: key);
@@ -17,71 +18,97 @@ class _AccueilState extends State<Accueil> {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            margin: const EdgeInsets.only(top: 60, left: 20, right: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SvgPicture.asset(
-                  "assets/icons/welc.svg",
-                  height: size.height * 0.45,
-                ),
-                SizedBox(
-                  height: 60,
-                ),
-                Text(
-                  'Bienvenue !',
-                  style: TextStyle(
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold,
+          SingleChildScrollView(
+            child: Container(
+              height: size.height,
+              padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 50),
+                    child: Container(
+                      child: Text(
+                        'Hustler',
+                        style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w800,
+                            color: kPrimaryColor),
+                      ),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  'Bienvenue sur hustler ,la solution pour tous vos petits travaux',
-                  style: TextStyle(
-                    fontSize: 23,
+                  SvgPicture.asset(
+                    "assets/icons/welc2.svg",
+                    height: size.height * 0.45,
+                    width: size.width,
                   ),
-                ),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 0, bottom: 50, left: 10, right: 10),
+                    child: Text(
+                      'Bienvenue sur Hustler , la solution pour vos petits travaux',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Positioned(
             bottom: 0,
-            child: Container(
-              margin: EdgeInsets.only(top: 20),
-              height: 140,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(28),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Login()));
-                      },
-                      highlightColor: Colors.white,
-                      child: CircleAvatar(
-                          radius: 25,
-                          backgroundColor: kPrimaryColor,
-                          child: Icon(
-                            Icons.arrow_forward_ios_outlined,
-                            size: 30,
-                            color: Colors.white,
-                          )),
+            right: 0,
+            left: 0,
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 10, right: 15, left: 15),
+                  width: size.width,
+                  height: 43,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      color: kPrimaryColor),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Login()));
+                    },
+                    child: Text(
+                      'Se connecter',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 17),
                     ),
-                  ],
+                  ),
                 ),
-              ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 10, right: 15, left: 15),
+                  width: size.width,
+                  height: 43,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      border: Border.all(color: kPrimaryColor),
+                      color: Colors.white),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Register()));
+                    },
+                    child: Text(
+                      "S'inscrire",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: kPrimaryColor,
+                          fontSize: 17),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ),
+          )
         ],
       ),
     );

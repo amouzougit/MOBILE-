@@ -31,8 +31,7 @@ class _RegisterState extends State<Register> {
             size: 20,
           ),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Login()));
+            Navigator.pop(context, true);
           },
         ),
       ),

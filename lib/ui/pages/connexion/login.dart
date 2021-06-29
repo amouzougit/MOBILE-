@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hustler_mob/constants.dart';
 import 'package:hustler_mob/ui/pages/accueil/accueil.dart';
 import 'package:hustler_mob/ui/pages/connexion/forgetPassword.dart';
-import 'package:hustler_mob/ui/pages/inscription/register.dart';
 import 'package:hustler_mob/ui/pages/principal/menu.dart';
 
 class Login extends StatefulWidget {
@@ -108,7 +107,7 @@ class _LoginState extends State<Login> {
                         ],
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,37 +139,6 @@ class _LoginState extends State<Login> {
                       SizedBox(
                         height: size.height * 0.03,
                       ),
-                      Container(
-                        height: 40,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(color: kPrimaryColor),
-                        ),
-                        width: size.width,
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Register()));
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "S'inscrire",
-                                style: TextStyle(
-                                  color: kPrimaryColor,
-                                ),
-                              ),
-                              Icon(
-                                Icons.rotate_right_sharp,
-                                color: kPrimaryColor,
-                              )
-                            ],
-                          ),
-                        ),
-                      )
                     ],
                   ),
                 ),

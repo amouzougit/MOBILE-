@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hustler_mob/ui/pages/connexion/login.dart';
-import 'package:hustler_mob/ui/pages/inscription/complete.dart';
-import 'package:hustler_mob/ui/pages/inscription/register.dart';
+import 'package:hustler_mob/ui/pages/principal/menu.dart';
 
 import '../../../constants.dart';
 
@@ -28,8 +27,7 @@ class _VerifiedEmailState extends State<VerifiedEmail> {
             size: 20,
           ),
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => CompleteRegister()));
+            Navigator.pop(context, true);
           },
         ),
       ),
@@ -140,10 +138,10 @@ class _VerifiedEmailState extends State<VerifiedEmail> {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.push(
+                            Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Register()));
+                                    builder: (context) => Menu()));
                           },
                           child: CircleAvatar(
                               radius: 25,

@@ -26,8 +26,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
             size: 20,
           ),
           onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Login()));
+            Navigator.pop(context, true);
           },
         ),
       ),

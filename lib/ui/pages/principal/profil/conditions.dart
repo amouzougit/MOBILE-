@@ -38,25 +38,14 @@ class _ConditionsState extends State<Conditions> {
           color: Colors.grey[200],
           child: Column(
             children: [
-              Container(
-                padding: EdgeInsets.only(left: 15, right: 10),
-                color: Colors.white,
-                width: size.width,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Text("Nos conditions",
-                      style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                ),
-              ),
               SizedBox(
                 height: 10,
               ),
               Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.all(15),
-                  width: size.width,
-                  child: Text(conditions))
+                color: Colors.white,
+                padding: EdgeInsets.all(15),
+                width: size.width,
+              )
             ],
           ),
         ),
