@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/activity/agents.dart';
-import 'package:hustler_mob/ui/pages/principal/activity/missions.dart';
-import 'package:hustler_mob/ui/pages/principal/activity/nothing.dart';
+import 'package:hustler/ui/pages/principal/activity/agents.dart';
+import 'package:hustler/ui/pages/principal/activity/missions.dart';
+import 'package:hustler/ui/pages/principal/activity/nothing.dart';
 
 class Activity extends StatefulWidget {
   const Activity({Key? key}) : super(key: key);

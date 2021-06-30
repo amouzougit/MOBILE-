@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hustler_mob/ui/pages/connexion/login.dart';
-import 'package:hustler_mob/ui/pages/inscription/verifiedEmail.dart';
+import 'package:hustler/ui/pages/connexion/login.dart';
+import 'package:hustler/ui/pages/inscription/verifiedEmail.dart';
 import '../../../constants.dart';
 
 class CompleteRegister extends StatefulWidget {

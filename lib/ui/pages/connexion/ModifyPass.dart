@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hustler_mob/ui/pages/principal/menu.dart';
+import 'package:hustler/ui/pages/principal/menu.dart';
 import '../../../constants.dart';
 import 'login.dart';
 

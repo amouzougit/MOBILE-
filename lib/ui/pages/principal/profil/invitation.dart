@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/constants.dart';
+import 'package:hustler/constants.dart';
 
 class Invitation extends StatefulWidget {
   const Invitation({Key? key}) : super(key: key);

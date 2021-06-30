@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte/contenuAlt.dart';
+import 'package:hustler/ui/pages/principal/home/alerte/contenuAlt.dart';
 
 import '../../../../../constants.dart';
 

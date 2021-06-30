@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hustler_mob/constants.dart';
-import 'package:hustler_mob/ui/pages/connexion/login.dart';
-import 'package:hustler_mob/ui/pages/inscription/register.dart';
+import 'package:hustler/constants.dart';
+import 'package:hustler/ui/pages/connexion/login.dart';
+import 'package:hustler/ui/pages/inscription/register.dart';
 
 class Accueil extends StatefulWidget {
   const Accueil({Key? key}) : super(key: key);

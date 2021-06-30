@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/Edit/contactUs.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/Edit/passwordModify.dart';
+import 'package:hustler/ui/pages/principal/profil/Edit/contactUs.dart';
+import 'package:hustler/ui/pages/principal/profil/Edit/passwordModify.dart';
 
 import '../../../../constants.dart';
 

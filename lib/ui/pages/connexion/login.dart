@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hustler_mob/constants.dart';
-import 'package:hustler_mob/ui/pages/accueil/accueil.dart';
-import 'package:hustler_mob/ui/pages/connexion/forgetPassword.dart';
-import 'package:hustler_mob/ui/pages/principal/menu.dart';
+import 'package:hustler/constants.dart';
+import 'package:hustler/ui/pages/accueil/accueil.dart';
+import 'package:hustler/ui/pages/connexion/forgetPassword.dart';
+import 'package:hustler/ui/pages/principal/menu.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);

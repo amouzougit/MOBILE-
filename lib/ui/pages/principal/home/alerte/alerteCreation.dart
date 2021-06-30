@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte/titreDesc.dart';
+import 'package:hustler/ui/pages/principal/home/alerte/titreDesc.dart';
 
 import '../../../../../constants.dart';
 

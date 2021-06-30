@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/home/postAgent/creation2.dart';
+import 'package:hustler/ui/pages/principal/home/postAgent/creation2.dart';
 
 import '../../../../../constants.dart';
 import '../../menu.dart';

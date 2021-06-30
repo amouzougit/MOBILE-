@@ -2,7 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/ui/pages/principal/message/contenuMsg.dart';
+import 'package:hustler/ui/pages/principal/message/contenuMsg.dart';
 
 import '../../../../constants.dart';
 

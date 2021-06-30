@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-//import 'package:hustler_mob/test.dart';
-import 'package:hustler_mob/ui/pages/connexion/ModifyPass.dart';
-import 'package:hustler_mob/ui/pages/connexion/login.dart';
+//import 'package:hustler/test.dart';
+import 'package:hustler/ui/pages/connexion/ModifyPass.dart';
+import 'package:hustler/ui/pages/connexion/login.dart';
 
 import '../../../constants.dart';
 

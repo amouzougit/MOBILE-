@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/constants.dart';
-import 'package:hustler_mob/ui/pages/connexion/login.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/adresse.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/aide.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/professionnel.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/competence.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/info.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/informations.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/invitation.dart';
-import 'package:hustler_mob/ui/pages/principal/profil/parametre.dart';
+import 'package:hustler/constants.dart';
+import 'package:hustler/ui/pages/connexion/login.dart';
+import 'package:hustler/ui/pages/principal/profil/adresse.dart';
+import 'package:hustler/ui/pages/principal/profil/aide.dart';
+import 'package:hustler/ui/pages/principal/profil/professionnel.dart';
+import 'package:hustler/ui/pages/principal/profil/competence.dart';
+import 'package:hustler/ui/pages/principal/profil/info.dart';
+import 'package:hustler/ui/pages/principal/profil/informations.dart';
+import 'package:hustler/ui/pages/principal/profil/invitation.dart';
+import 'package:hustler/ui/pages/principal/profil/parametre.dart';
 
 import 'conditions.dart';
 

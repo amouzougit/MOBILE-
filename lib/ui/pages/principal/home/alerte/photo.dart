@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte/dateTravail.dart';
-import 'package:hustler_mob/ui/pages/principal/menu.dart';
+import 'package:hustler/ui/pages/principal/home/alerte/dateTravail.dart';
+import 'package:hustler/ui/pages/principal/menu.dart';
 
 import '../../../../../constants.dart';
 

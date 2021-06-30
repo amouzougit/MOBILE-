@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
-import 'package:hustler_mob/constants.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte/alerteConditionsAccept.dart';
+import 'package:hustler/constants.dart';
+import 'package:hustler/ui/pages/principal/home/alerte/alerteConditionsAccept.dart';
 
 class AlerteContenu extends StatefulWidget {
   const AlerteContenu({Key? key}) : super(key: key);

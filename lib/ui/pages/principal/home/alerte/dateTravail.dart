@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte/aper%C3%A7u.dart';
+import 'package:hustler/ui/pages/principal/home/alerte/aper%C3%A7u.dart';
 
 import '../../../../../constants.dart';
 import '../../menu.dart';

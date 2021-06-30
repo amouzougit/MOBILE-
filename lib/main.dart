@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/accueil/accueil.dart';
+import 'package:hustler/ui/pages/accueil/accueil.dart';
 import 'constants.dart';
 
 void main() => runApp(MyApp());

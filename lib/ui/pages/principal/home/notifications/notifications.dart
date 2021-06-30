@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hustler_mob/ui/pages/principal/home/notifications/nothingNot.dart';
-import 'package:hustler_mob/ui/pages/principal/home/notifications/notifList.dart';
+import 'package:hustler/ui/pages/principal/home/notifications/nothingNot.dart';
+import 'package:hustler/ui/pages/principal/home/notifications/notifList.dart';
 
 import '../../../../../constants.dart';
 

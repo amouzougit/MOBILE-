@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hustler_mob/ui/pages/connexion/login.dart';
-import 'package:hustler_mob/ui/pages/inscription/complete.dart';
+import 'package:hustler/ui/pages/connexion/login.dart';
+import 'package:hustler/ui/pages/inscription/complete.dart';
 
 import '../../../constants.dart';
 

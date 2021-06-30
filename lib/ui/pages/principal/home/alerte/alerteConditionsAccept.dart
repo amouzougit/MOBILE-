@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hustler_mob/ui/pages/principal/home/alerte/send_offer.dart';
+import 'package:hustler/ui/pages/principal/home/alerte/send_offer.dart';
 
 import '../../../../../constants.dart';
 
