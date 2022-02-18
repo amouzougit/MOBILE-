@@ -7,6 +7,8 @@ import 'package:hustler/ui/pages/principal/profil/Edit/genreModify.dart';
 import 'package:hustler/ui/pages/principal/profil/Edit/numberModify.dart';
 import 'package:hustler/ui/pages/principal/profil/Edit/usernamesModify.dart';
 
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../../../constants.dart';
 
 class Informations extends StatefulWidget {
@@ -17,6 +19,11 @@ class Informations extends StatefulWidget {
 }
 
 class _InformationsState extends State<Informations> {
+  Future<String> getUsername() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('username') ?? "";
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -146,12 +153,26 @@ class _InformationsState extends State<Informations> {
                                             style: GoogleFonts.nunito(
                                                 fontSize: 15),
                                           ),
-                                          Text(
+                                          FutureBuilder(
+                                            future: getUsername(),
+                                            builder: (context,
+                                                AsyncSnapshot snapshot) {
+                                              return Text(
+                                                "${snapshot.data}",
+                                                style: TextStyle(
+                                                    fontSize: 15,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              );
+                                            },
+                                          ),
+
+                                          /*Text(
                                             'Username',
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 fontWeight: FontWeight.w600),
-                                          ),
+                                          ),*/
                                         ],
                                       ),
                                     ],

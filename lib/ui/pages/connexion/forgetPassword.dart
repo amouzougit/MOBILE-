@@ -16,48 +16,30 @@ class _ForgetPasswordState extends State<ForgetPassword> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            color: kPrimaryColor,
-            size: 20,
-          ),
-          onPressed: () {
-            Navigator.pop(context, true);
-          },
-        ),
-      ),
-      //backgroundColor: kPrimaryColor,
-      body: Stack(
-        children: [
-          Container(
-            //color: kPrimaryColor,
-            height: size.height,
-            alignment: Alignment.topCenter,
-            child: SvgPicture.asset(
-              "assets/icons/forget.svg",
-              height: size.height * 0.3,
-              width: size.width,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios,
+              color: kPrimaryColor,
+              size: 20,
             ),
+            onPressed: () {
+              Navigator.pop(context, true);
+            },
           ),
-          Positioned(
-            bottom: 0,
-            child: Container(
-              height: size.height * 0.5,
-              width: size.width,
-              decoration: BoxDecoration(
-                borderRadius: new BorderRadius.only(
-                  topLeft: const Radius.circular(50.0),
-                  topRight: const Radius.circular(50.0),
-                ),
-                color: Colors.white,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
+        ),
+        //backgroundColor: kPrimaryColor,
+        body: SingleChildScrollView(
+          child: Container(
+              height: size.height,
+              alignment: Alignment.center,
+              padding: EdgeInsets.only(left: 5.0, right: 0.5, top: 0),
+              child: Center(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
                       height: 10,
@@ -99,7 +81,9 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                         ),
                       ],
                     ),
-                    Spacer(),
+                    SizedBox(
+                      height: 30,
+                    ),
                     Container(
                       //margin: const EdgeInsets.only(top:2),
                       child: Row(
@@ -127,11 +111,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     )
                   ],
                 ),
-              ),
-            ),
-          )
-        ],
-      ),
-    );
+              )),
+        ));
   }
 }
