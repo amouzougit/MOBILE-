@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hustler/call_api/security.dart';
 import 'package:hustler/ui/pages/principal/home/alerte/lieuPrix.dart';
 import 'package:hustler/ui/pages/principal/menu.dart';
 
@@ -12,6 +13,34 @@ class TitreDescAlerte extends StatefulWidget {
 }
 
 class _TitreDescAlerteState extends State<TitreDescAlerte> {
+  String description = '';
+  ApiSecurityService apiSecurity = new ApiSecurityService();
+
+  void setDescription(text) {
+    this.description = text;
+  }
+
+  String titre = '';
+  void setTitre(text) {
+    this.titre = text;
+  }
+
+  void creer() async {
+    var data = await this.apiSecurity.creerOffre(this.titre, this.description);
+
+    if (data == "CREER") {
+      final snackBarMessage =
+          SnackBar(content: Text("Vous avez creer votre offre"));
+      ScaffoldMessenger.of(context).showSnackBar(snackBarMessage);
+      Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));
+    } else {
+      final snackBarMessage = SnackBar(
+          content: Text(
+              "Erreur subvenir lors de votre creation, veilllez  reesayer "));
+      ScaffoldMessenger.of(context).showSnackBar(snackBarMessage);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     late String choix = "";
@@ -72,53 +101,54 @@ class _TitreDescAlerteState extends State<TitreDescAlerte> {
               ),
               Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                  width: size.width * 0.32,
+                  width: size.width * 1,
                   height: 3,
                   color: Colors.pink),
               Padding(
                 padding: const EdgeInsets.fromLTRB(15, 15, 15, 5),
-                child: Text("De quel type de service sagit-il ?",
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold)),
+                // child: Text("De quel type de service sagit-il ?",
+                //     style: TextStyle(
+                //         fontSize: 15,
+                //         color: Colors.black,
+                //         fontWeight: FontWeight.bold)),
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(15, 0, 15, 15),
-                child: Text(
-                    "Choisissez un type de service correspondant à votre annonce",
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w300)),
-              ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
-                child: DropdownButton<String>(
-                  hint: Text('Type de service'),
-                  //dropdownColor: kPrimaryColor,
-                  icon: Icon(Icons.keyboard_arrow_down_sharp),
-                  iconSize: 25,
+              // Padding(
+              //   padding: const EdgeInsets.fromLTRB(15, 0, 15, 15),
+              //   child: Text(
+              //       "Choisissez un type de service correspondant à votre annonce",
+              //       style: TextStyle(
+              //           fontSize: 13,
+              //           color: Colors.black,
+              //           fontWeight: FontWeight.w300)),
+              // ),
+              // Container(
+              //   padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
+              //   child: DropdownButton<String>(
+              //     hint: Text('Type de service'),
+              //     //dropdownColor: kPrimaryColor,
+              //     icon: Icon(Icons.keyboard_arrow_down_sharp),
+              //     iconSize: 25,
 
-                  underline: Container(
-                    height: 1,
-                    color: Colors.grey[400],
-                  ),
-                  isExpanded: true,
-                  value: choix.isNotEmpty ? choix : null,
-                  onChanged: (String? newChoix) {
-                    setState(() {
-                      choix = newChoix!;
-                    });
-                  },
-                  items: listItem.map((valeur) {
-                    return DropdownMenuItem<String>(
-                      value: valeur,
-                      child: Container(child: Text(valeur)),
-                    );
-                  }).toList(),
-                ),
-              ),
+              //     underline: Container(
+              //       height: 1,
+              //       color: Colors.grey[400],
+              //     ),
+              //     isExpanded: true,
+              //     value: choix.isNotEmpty ? choix : null,
+              //     onChanged: (String? newChoix) {
+              //       setState(() {
+              //         choix = newChoix!;
+              //       });
+              //     },
+              //     items: listItem.map((valeur) {
+              //       return DropdownMenuItem<String>(
+              //         value: valeur,
+              //         child: Container(child: Text(valeur)),
+              //       );
+              //     }).toList(),
+              //   ),
+              // ),
+
               Padding(
                 padding: const EdgeInsets.fromLTRB(15, 15, 15, 5),
                 child: Text("Donner un titre à votre annonce",
@@ -138,6 +168,7 @@ class _TitreDescAlerteState extends State<TitreDescAlerte> {
               Container(
                 padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
                 child: TextFormField(
+                  onChanged: (value) => {this.setTitre(value)},
                   keyboardType: TextInputType.multiline,
                   maxLines: null,
                   decoration: InputDecoration(
@@ -166,6 +197,7 @@ class _TitreDescAlerteState extends State<TitreDescAlerte> {
               Container(
                 padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
                 child: TextFormField(
+                  onChanged: (value) => {this.setDescription(value)},
                   keyboardType: TextInputType.multiline,
                   maxLines: null,
                   decoration: InputDecoration(
@@ -201,11 +233,10 @@ class _TitreDescAlerteState extends State<TitreDescAlerte> {
                 color: kPrimaryColor),
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LieuPrix()));
+                this.creer();
               },
               child: Text(
-                'Continuer',
+                "Creer l'offre",
                 style: TextStyle(
                     fontWeight: FontWeight.w500,
                     color: Colors.white,

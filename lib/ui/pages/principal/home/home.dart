@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
         child: SingleChildScrollView(
             child: Column(
           children: [
-            SearchBar(),
+            //SearchBar(),
             AlerteList(),
           ],
         )),
@@ -59,20 +59,20 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   MaterialPageRoute(builder: (context) => PostCreation()));
         },
       ),
-      title: Text('Hustler',
+      title: Text('Offre',
           style: GoogleFonts.nunito(
               color: kPrimaryColor, fontWeight: FontWeight.bold)),
       actions: [
-        IconButton(
-          icon: Icon(
-            Icons.notifications_none_rounded,
-            color: kPrimaryColor,
-          ),
-          onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Notifications()));
-          },
-        ),
+        // IconButton(
+        //   icon: Icon(
+        //     Icons.notifications_none_rounded,
+        //     color: kPrimaryColor,
+        //   ),
+        //   onPressed: () {
+        //     Navigator.push(context,
+        //         MaterialPageRoute(builder: (context) => Notifications()));
+        //   },
+        // ),
       ],
       backgroundColor: Colors.white,
       centerTitle: true,
@@ -109,7 +109,7 @@ class SearchBar extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: 'Cherchez un ...',
+                        hintText: 'Cherchez une offre',
                         contentPadding: EdgeInsets.all(10)),
                   ),
                 ),

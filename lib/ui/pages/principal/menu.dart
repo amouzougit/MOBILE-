@@ -17,8 +17,8 @@ class _MenuState extends State<Menu> {
   int selectIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     Home(),
-    Activity(),
-    Messages(),
+    // Activity(),
+    // Messages(),
     Profil(),
   ];
 
@@ -39,11 +39,10 @@ class _MenuState extends State<Menu> {
         type: BottomNavigationBarType.fixed,
         //backgroundColor: Colors.grey,
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_filled), label: 'Accueil'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.attractions), label: 'Activités'),
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Messages'),
+          BottomNavigationBarItem(icon: Icon(Icons.work), label: 'Offres'),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.attractions), label: 'Activités'),
+          // BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Messages'),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_pin), label: 'Profil'),
         ],

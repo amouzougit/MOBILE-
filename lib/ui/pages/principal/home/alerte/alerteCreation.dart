@@ -61,7 +61,7 @@ class _AlerteCreationState extends State<AlerteCreation> {
               ),
               Container(
                   margin: EdgeInsets.fromLTRB(0, 0, 0, 30),
-                  width: size.width * 0.16,
+                  width: size.width * .5,
                   height: 3,
                   color: Colors.pink),
               Center(

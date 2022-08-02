@@ -17,7 +17,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-
   ApiSecurityService apiSecurity = new ApiSecurityService();
   String password = '';
   String username = '';
@@ -31,8 +30,7 @@ class _LoginState extends State<Login> {
   }
 
   bool validateFields() {
-    if (this.password.isNotEmpty &&
-        this.username.isNotEmpty) {
+    if (this.password.isNotEmpty && this.username.isNotEmpty) {
       return true;
     } else if (this.username.isEmpty) {
       Fluttertoast.showToast(msg: "Entrez votre nom d'utilisateur");
@@ -43,26 +41,32 @@ class _LoginState extends State<Login> {
   }
 
   void login() async {
+    print("login");
     if (this.validateFields()) {
+      print("login2");
+
       var data = await this.apiSecurity.login(this.username, this.password);
-      if (data.runtimeType.toString() == "_InternalLinkedHashMap<String, dynamic>")
-      {
+      print(data);
+      if (data.runtimeType.toString() ==
+          "_InternalLinkedHashMap<String, dynamic>") {
+        print("login3");
         final prefs = await SharedPreferences.getInstance();
         prefs.setString('id', data["id"]);
         prefs.setString('username', data["username"]);
         prefs.setString('email', data["email"]);
-        prefs.setString('roles', data["roles"][0]);
+        //prefs.setString('roles', data["roles"][0]);
         prefs.setString('accessToken', data["accessToken"]);
         prefs.setString('tokenType', data["tokenType"]);
-        
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => Menu()));
-      }else{
+        prefs.setString('profession', data["profession"]);
+        prefs.setString('telephone', data["telephone"]);
+        prefs.setString('createdAt', data["createdAt"]);
+
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Menu()));
+      } else {
         final snackBarMessage = SnackBar(content: Text("${data}"));
         ScaffoldMessenger.of(context).showSnackBar(snackBarMessage);
       }
-
-      
     }
   }
 

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hustler/ui/pages/principal/profil/informations.dart';
+import 'package:intl/date_symbol_data_local.dart';
+
+import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../constants.dart';
 
@@ -12,6 +16,32 @@ class Infos extends StatefulWidget {
 }
 
 class _InfosState extends State<Infos> {
+  Object username = '';
+  Object email = '';
+  Object profession = '';
+  Object telephone = '';
+  Object createdAt = '';
+  String formattedDate = '';
+
+  Future<Object?> initData() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      username = (prefs.get("username") ?? "");
+      email = (prefs.get("email") ?? "");
+      profession = (prefs.get("profession") ?? "");
+      telephone = (prefs.get("telephone") ?? "");
+      createdAt = (prefs.get("createdAt") ?? "");
+      initializeDateFormatting('fr_FR', null).then((_) => formattedDate =
+          DateFormat('yMd').format(DateTime.parse(createdAt.toString())));
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initData();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -55,7 +85,7 @@ class _InfosState extends State<Infos> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Username',
+                      this.username.toString(),
                       style: TextStyle(
                           fontSize: 25,
                           color: Colors.black,
@@ -66,11 +96,43 @@ class _InfosState extends State<Infos> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Icon(Icons.place, size: 15),
+                          Icon(Icons.mail, size: 15),
                           SizedBox(
                             width: 5,
                           ),
-                          Text('Adresse',
+                          Text(this.email.toString(),
+                              maxLines: 2,
+                              style: GoogleFonts.nunito(
+                                  color: Colors.grey[700], fontSize: 14)),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(Icons.call, size: 15),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(this.telephone.toString(),
+                              maxLines: 2,
+                              style: GoogleFonts.nunito(
+                                  color: Colors.grey[700], fontSize: 14)),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Icon(Icons.work, size: 15),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(this.profession.toString(),
                               maxLines: 2,
                               style: GoogleFonts.nunito(
                                   color: Colors.grey[700], fontSize: 14)),
@@ -99,17 +161,17 @@ class _InfosState extends State<Infos> {
                     )),
               ],
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 10, 200, 15),
-              height: 0.5,
-              color: Colors.grey[400],
-            ),
-            Container(
-              width: size.width,
-              child: Text('Pas de description',
-                  style: GoogleFonts.nunito(
-                      color: Colors.grey[700], fontSize: 15)),
-            ),
+            // Container(
+            //   margin: EdgeInsets.fromLTRB(0, 10, 200, 15),
+            //   height: 0.5,
+            //   color: Colors.grey[400],
+            // ),
+            // Container(
+            //   width: size.width,
+            //   child: Text('Pas de description',
+            //       style: GoogleFonts.nunito(
+            //           color: Colors.grey[700], fontSize: 15)),
+            // ),
             Container(
               margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
               height: 0.5,
@@ -126,7 +188,7 @@ class _InfosState extends State<Infos> {
                   SizedBox(
                     height: 10,
                   ),
-                  Text("date d'inscription",
+                  Text(this.formattedDate,
                       style: GoogleFonts.nunito(
                           color: Colors.grey[700], fontSize: 15)),
                 ],

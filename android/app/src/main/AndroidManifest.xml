@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hustler_mob">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
    <application
         android:label="hustler_mob"
         android:icon="@mipmap/ic_launcher">

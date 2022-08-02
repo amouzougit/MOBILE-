@@ -68,17 +68,17 @@ class _AlerteConditionAcceptState extends State<AlerteConditionAccept> {
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(5)),
             color: kPrimaryColor),
-        child: TextButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-                context, MaterialPageRoute(builder: (context) => SendOffer()));
-          },
-          child: Text(
-            'Accepter',
-            style: TextStyle(
-                fontWeight: FontWeight.bold, color: Colors.white, fontSize: 17),
-          ),
-        ),
+        // child: TextButton(
+        //   onPressed: () {
+        //     Navigator.pushReplacement(
+        //         context, MaterialPageRoute(builder: (context) => SendOffer()));
+        //   },
+        //   child: Text(
+        //     'Accepter',
+        //     style: TextStyle(
+        //         fontWeight: FontWeight.bold, color: Colors.white, fontSize: 17),
+        //   ),
+        // ),
       ),
     );
   }

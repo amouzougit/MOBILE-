@@ -56,7 +56,7 @@ class _AccueilState extends State<Accueil> {
                       padding: const EdgeInsets.only(
                           top: 70, bottom: 70, left: 10, right: 10),
                       child: Text(
-                        'Bienvenue sur Hustler , la solution pour vos petits travaux',
+                        'Bienvenue sur Edoa , la solution pour vos petits travaux',
                         style: TextStyle(
                             fontWeight: FontWeight.w600, fontSize: 15),
                         textAlign: TextAlign.center,
@@ -67,7 +67,7 @@ class _AccueilState extends State<Accueil> {
                     padding: const EdgeInsets.only(
                         top: 0, bottom: 50, left: 10, right: 10),
                     child: Text(
-                      'Bienvenue sur Hustler , la solution pour vos petits travaux',
+                      'Bienvenue sur Edoa , la solution pour vos petits travaux',
                       style:
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                       textAlign: TextAlign.center,

@@ -10,6 +10,7 @@ import 'package:hustler/ui/pages/principal/profil/info.dart';
 import 'package:hustler/ui/pages/principal/profil/informations.dart';
 import 'package:hustler/ui/pages/principal/profil/invitation.dart';
 import 'package:hustler/ui/pages/principal/profil/parametre.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'conditions.dart';
 
@@ -21,6 +22,21 @@ class Profil extends StatefulWidget {
 }
 
 class _ProfilState extends State<Profil> {
+  Object username = '';
+
+  Future<Object?> initData() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      username = (prefs.get("username") ?? "");
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    initData();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -45,7 +61,7 @@ class _ProfilState extends State<Profil> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Username',
+                      this.username.toString(),
                       style: TextStyle(
                           fontSize: 25,
                           color: Colors.black,
@@ -129,88 +145,88 @@ class _ProfilState extends State<Profil> {
                         ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
-                      color: Colors.grey[400],
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      //height: size.//height * 0.06,
-                      width: size.width,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Adresse()));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.place_outlined,
-                                  color: kPrimaryColor,
-                                ),
-                                SizedBox(width: 10),
-                                Text(
-                                  'Mon adresse',
-                                  style: GoogleFonts.nunito(fontSize: 15),
-                                ),
-                              ],
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              size: 15,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
-                      color: Colors.grey[400],
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      //height: size.//height * 0.06,
-                      width: size.width,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Conditions()));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.privacy_tip_outlined,
-                                  color: kPrimaryColor,
-                                ),
-                                SizedBox(width: 10),
-                                Text(
-                                  'Conditions génerales',
-                                  style: GoogleFonts.nunito(fontSize: 15),
-                                ),
-                              ],
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              size: 15,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
+                    //   height: 0.5,
+                    //   color: Colors.grey[400],
+                    // ),
+                    // Container(
+                    //   padding: EdgeInsets.all(8.0),
+                    //   //height: size.//height * 0.06,
+                    //   width: size.width,
+                    //   child: InkWell(
+                    //     onTap: () {
+                    //       Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => Adresse()));
+                    //     },
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //       children: [
+                    //         Row(
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             Icon(
+                    //               Icons.place_outlined,
+                    //               color: kPrimaryColor,
+                    //             ),
+                    //             SizedBox(width: 10),
+                    //             Text(
+                    //               'Mon adresse',
+                    //               style: GoogleFonts.nunito(fontSize: 15),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //         Icon(
+                    //           Icons.arrow_forward_ios_rounded,
+                    //           size: 15,
+                    //         )
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
+                    //   height: 0.5,
+                    //   color: Colors.grey[400],
+                    // ),
+                    // Container(
+                    //   padding: EdgeInsets.all(8.0),
+                    //   //height: size.//height * 0.06,
+                    //   width: size.width,
+                    //   child: InkWell(
+                    //     onTap: () {
+                    //       Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => Conditions()));
+                    //     },
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //       children: [
+                    //         Row(
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             Icon(
+                    //               Icons.privacy_tip_outlined,
+                    //               color: kPrimaryColor,
+                    //             ),
+                    //             SizedBox(width: 10),
+                    //             Text(
+                    //               'Conditions génerales',
+                    //               style: GoogleFonts.nunito(fontSize: 15),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //         Icon(
+                    //           Icons.arrow_forward_ios_rounded,
+                    //           size: 15,
+                    //         )
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -220,85 +236,86 @@ class _ProfilState extends State<Profil> {
                 color: Colors.white,
                 child: Column(
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      //height: size.//height * 0.06,
-                      width: size.width,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Professionnel()));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(Icons.verified, color: kPrimaryColor),
-                                SizedBox(width: 10),
-                                Text(
-                                  'Devenir PRO',
-                                  style: GoogleFonts.nunito(fontSize: 15),
-                                ),
-                              ],
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              size: 15,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
-                      color: Colors.grey[400],
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      //height: size.//height * 0.06,
-                      width: size.width,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Competences()));
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.edit_road,
-                                  color: kPrimaryColor,
-                                ),
-                                SizedBox(width: 10),
-                                Text(
-                                  'Mes competences',
-                                  style: GoogleFonts.nunito(fontSize: 15),
-                                ),
-                              ],
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios_rounded,
-                              size: 15,
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
-                      height: 0.5,
-                      color: Colors.grey[400],
-                    ),
+                    // Container(
+                    //   padding: EdgeInsets.all(8.0),
+                    //   //height: size.//height * 0.06,
+                    //   width: size.width,
+                    //   child: InkWell(
+                    //     onTap: () {
+                    //       Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => Professionnel()));
+                    //     },
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //       children: [
+                    //         Row(
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             Icon(Icons.verified, color: kPrimaryColor),
+                    //             SizedBox(width: 10),
+                    //             Text(
+                    //               'Devenir PRO',
+                    //               style: GoogleFonts.nunito(fontSize: 15),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //         Icon(
+                    //           Icons.arrow_forward_ios_rounded,
+                    //           size: 15,
+                    //         )
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
+                    //   height: 0.5,
+                    //   color: Colors.grey[400],
+                    // ),
+                    // Container(
+                    //   padding: EdgeInsets.all(8.0),
+                    //   //height: size.//height * 0.06,
+                    //   width: size.width,
+                    //   child: InkWell(
+                    //     onTap: () {
+                    //       Navigator.push(
+                    //           context,
+                    //           MaterialPageRoute(
+                    //               builder: (context) => Competences()));
+                    //     },
+                    //     child: Row(
+                    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //       children: [
+                    //         Row(
+                    //           crossAxisAlignment: CrossAxisAlignment.center,
+                    //           children: [
+                    //             Icon(
+                    //               Icons.edit_road,
+                    //               color: kPrimaryColor,
+                    //             ),
+                    //             SizedBox(width: 10),
+                    //             Text(
+                    //               'Mes competences',
+                    //               style: GoogleFonts.nunito(fontSize: 15),
+                    //             ),
+                    //           ],
+                    //         ),
+                    //         Icon(
+                    //           Icons.arrow_forward_ios_rounded,
+                    //           size: 15,
+                    //         )
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(35, 0, 0, 5),
+                    //   height: 0.5,
+                    //   color: Colors.grey[400],
+                    // ),
+
                     Container(
                       padding: EdgeInsets.all(8.0),
                       //height: size.//height * 0.06,
@@ -463,7 +480,7 @@ class _ProfilState extends State<Profil> {
                 height: 20,
               ),
               Text(
-                'Hustler',
+                'Offre',
                 style: GoogleFonts.nunito(fontSize: 15),
               ),
               Text(
